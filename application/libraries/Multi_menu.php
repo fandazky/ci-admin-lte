@@ -434,7 +434,7 @@ class Multi_menu {
 						$item_anchor = $this->parent_anchor;
 		        	}
 
-					$href  = 'javascript:;';				
+					$href  = '#';				
 		        }
 		        else 
 		        {

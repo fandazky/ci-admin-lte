@@ -6,7 +6,6 @@ class Home extends MY_Controller {
 	public function index()
 	{
 		$data['_title'] = "Home";
-		$this->add_js('bootstrap.min.js');
 		$this->add_js('https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js', TRUE);
 		$this->add_js('plugins/morris/morris.min.js');
 		$this->add_js('plugins/sparkline/jquery.sparkline.min.js');

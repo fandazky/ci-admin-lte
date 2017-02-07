@@ -45,6 +45,7 @@ class MY_Controller extends CI_Controller {
         $this->add_js("plugins/jQuery/jquery-2.2.3.min.js");
         $this->add_js("https://code.jquery.com/ui/1.11.4/jquery-ui.min.js", TRUE);
         $this->add_js("$.widget.bridge('uibutton', $.ui.button);", FALSE, TRUE);
+        $this->add_js('bootstrap.min.js');
     }
 
     public function add_js($js, $from_url=FALSE, $is_script=FALSE) {
@@ -116,12 +117,7 @@ class MY_Controller extends CI_Controller {
 
 		$this->load->library("multi_menu");
 		$this->multi_menu->set_items($items);
-
-		$this->load->library('multi_menu');
-
-		$config["nav_tag_open"]          = '<ul class="mainnav">';		
-		$config["parent_tag_open"]       = '<li class="dropdown">';			
-		$config["children_tag_open"]     = '<ul class="dropdown-menu">';
-		$this->multi_menu->initialize($config);
+  //       $config = $this->load->config()
+		// $this->multi_menu->initialize($config);
     }
 }

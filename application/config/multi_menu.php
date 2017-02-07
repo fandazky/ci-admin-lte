@@ -7,14 +7,14 @@ $config["menu_icon"] 			 = 'menu_icon';
 $config["menu_key"]              = 'menu_url';
 $config["menu_order"]            = 'order_number';
 
-$config["nav_tag_open"]          = '<ul>';
+$config["nav_tag_open"]          = '<ul class="sidebar-menu">';
 $config["nav_tag_close"]         = '</ul>';
 $config["item_tag_open"]         = '<li>'; 
 $config["item_tag_close"]        = '</li>';	
-$config["parent_tag_open"]       = '<li>';	
+$config["parent_tag_open"]       = '<li class="treeview">';	
 $config["parent_tag_close"]      = '</li>';	
-$config["parent_anchor"]     	 = '<a href="%s" class="dropdown-toggle" data-toggle="dropdown">%s</a>';	
-$config["children_tag_open"]     = '<ul>';	
+$config["parent_anchor"]     	 = '<a href="%s">%s</a>';	
+$config["children_tag_open"]     = '<ul class="treeview-menu">';	
 $config["children_tag_close"]    = '</ul>';	
 $config['icon_position']		 = 'left'; // 'left' or 'right'
 $config['menu_icons_list']		 = array();
