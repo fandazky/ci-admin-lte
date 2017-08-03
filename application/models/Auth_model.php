@@ -2,6 +2,7 @@
     exit('No direct script access allowed');
 
 class Auth_model extends CI_Model {
+    
 	public function __construct(){
 		parent::__construct();
 	}
@@ -49,17 +50,14 @@ class Auth_model extends CI_Model {
     }
 
     public function is_password_match($username, $password, $saved_password){
-        $encrypted_password = $this->encrypt_password($password, $username);
-
-        if ($encrypted_password == $saved_password) {
-            return TRUE;  
-        } 
+        if (password_verify($password, $saved_password)) {
+            return TRUE;
+        }    
         return FALSE;
     }
 
     public function encrypt_password($password, $username) {
-        $salt = "R4h4s1A";
-        return sha1($password. $salt . $username);
+        return password_hash($password, PASSWORD_BCRYPT);
     }
 
     public function get_account_role() {
